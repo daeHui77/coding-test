@@ -12,8 +12,6 @@ int main()
 
 	for (int i = 0; a[i]!= '\0'; i++)
 	{
-		
-		
 		if (a[i] == '(')
 		{
 			arr.push(a[i]);
@@ -23,16 +21,17 @@ int main()
 			if (arr.empty())
 			{
 				printf("%s", "NO");
-				return 0;
+				f = false;
+				break;
 			}else arr.pop();
 			
 		}
 	}
-	if (!arr.empty() )
+	if (!arr.empty() && f == true)
 	{
 		printf("%s", "NO");
 	}
-	else if (arr.empty())
+	else if (arr.empty() && f == true)
 	{
 		printf("%s", "YES");
 	}
